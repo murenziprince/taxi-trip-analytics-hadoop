@@ -1,0 +1,21 @@
+=== JOB: hourly ===
+  output rows: 24 | elapsed: 19.841802139s
+=== JOB: daily ===
+  output rows: 7 | elapsed: 20.186001356s
+=== JOB: location ===
+  output rows: 260 | elapsed: 19.551681985s
+=== JOB: revenue ===
+  output rows: 260 | elapsed: 24.541319023s
+=== JOB: payment ===
+  output rows: 5 | elapsed: 21.725681163s
+=== JOB: distance ===
+  output rows: 5 | elapsed: 24.179456690s
+=== JOB: route ===
+  output rows: 39456 | elapsed: 22.420874199s
+=== JOB: duration ===
+  output rows: 5 | elapsed: 25.540674451s
+=== JOB: anomaly ===
+  output rows: 5 | elapsed: 24.491003302s
+=== JOB: revenue_top10 (multi-stage, Stage 2) ===
+  elapsed: .027177132s
+ALL JOBS COMPLETE

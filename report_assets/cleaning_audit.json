@@ -1,0 +1,103 @@
+{
+  "stage": "data_cleaning",
+  "rules": [
+    {
+      "rule": "duplicates",
+      "description": "Exact duplicate rows (kept first occurrence)",
+      "records_affected": 0,
+      "pct_of_dataset": 0.0
+    },
+    {
+      "rule": "invalid_timestamp_order",
+      "description": "Dropoff time <= pickup time",
+      "records_affected": 85668,
+      "pct_of_dataset": 1.2024
+    },
+    {
+      "rule": "impossible_duration",
+      "description": "Trip duration <= 0 min or > 1440 min (24h)",
+      "records_affected": 72,
+      "pct_of_dataset": 0.001
+    },
+    {
+      "rule": "zero_negative_distance",
+      "description": "trip_distance <= 0 miles",
+      "records_affected": 246914,
+      "pct_of_dataset": 3.4656
+    },
+    {
+      "rule": "extreme_distance",
+      "description": "trip_distance > 100 miles",
+      "records_affected": 332,
+      "pct_of_dataset": 0.0047
+    },
+    {
+      "rule": "missing_passenger_count_imputed",
+      "description": "Missing passenger_count imputed to 1",
+      "records_affected": 1924324,
+      "pct_of_dataset": 27.009
+    },
+    {
+      "rule": "invalid_passenger_count",
+      "description": "Reported passenger_count <=0 or >6",
+      "records_affected": 26422,
+      "pct_of_dataset": 0.3708
+    },
+    {
+      "rule": "invalid_fare",
+      "description": "fare_amount <= 0 or total_amount <= 0",
+      "records_affected": 64885,
+      "pct_of_dataset": 0.9107
+    },
+    {
+      "rule": "extreme_fare",
+      "description": "total_amount > $1000",
+      "records_affected": 0,
+      "pct_of_dataset": 0.0
+    },
+    {
+      "rule": "invalid_location_id",
+      "description": "PU/DOLocationID outside valid TLC zone range 1-263",
+      "records_affected": 41823,
+      "pct_of_dataset": 0.587
+    },
+    {
+      "rule": "missing_RatecodeID_imputed",
+      "description": "RatecodeID imputed to 1",
+      "records_affected": 1917311,
+      "pct_of_dataset": 26.9106
+    },
+    {
+      "rule": "missing_store_and_fwd_flag_imputed",
+      "description": "store_and_fwd_flag imputed to N",
+      "records_affected": 1917311,
+      "pct_of_dataset": 26.9106
+    },
+    {
+      "rule": "missing_congestion_surcharge_imputed",
+      "description": "Missing congestion_surcharge imputed to 0.0",
+      "records_affected": 1917311,
+      "pct_of_dataset": 26.9106
+    },
+    {
+      "rule": "missing_Airport_fee_imputed",
+      "description": "Missing Airport_fee imputed to 0.0",
+      "records_affected": 1917311,
+      "pct_of_dataset": 26.9106
+    },
+    {
+      "rule": "negative_fee_components",
+      "description": "Negative fee component(s) clipped to 0",
+      "records_affected": 96,
+      "pct_of_dataset": 0.0013
+    }
+  ],
+  "months_included": [
+    "yellow_tripdata_2026-01.parquet",
+    "yellow_tripdata_2026-02.parquet"
+  ],
+  "total_raw_records": 7124755,
+  "total_clean_records": 6658639,
+  "total_removed": 466116,
+  "pct_removed": 6.5422
+}

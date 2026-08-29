@@ -1,0 +1,10 @@
+{
+  "dataset_size_mb": 1007.9,
+  "num_records": 6658639,
+  "pandas_time_sec": 73.19,
+  "pandas_peak_mem_mb": 1335.4,
+  "streaming_time_sec": 188.17,
+  "streaming_output_kb": 12.0,
+  "est_mapper_tasks_on_cluster": 8,
+  "est_reducer_tasks_on_cluster": 1
+}
